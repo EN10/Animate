@@ -1,0 +1,19 @@
+<canvas id="c">
+<script>
+setInterval(animate,300);
+var x = 0
+
+function animate(){
+var c = document.getElementById("c").getContext("2d");
+    var Man = new Image();
+    Man.src = "walk-right.png";
+    c.clearRect(0,0,300,150);
+    c.drawImage(Man,x,0,100,150,0,0,100,150);
+    x += 102;
+    if (x > 600) x=0;
+    console.log(x);
+}
+
+// http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/
+
+</script>
